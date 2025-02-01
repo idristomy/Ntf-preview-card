@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    font-family: "Outfit", serif;
+}
+:root{
+    --main-Bg-color: hsl(217, 54%, 11%);
+    --card-Bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --cyan: hsl(178, 100%, 50%);
+    --Soft-blue: hsl(215, 51%, 70%);
+}
+body{
+    background-color: var(--main-Bg-color);
+    height: 100vh;
+}
+.card{
+    background-color: var(--card-Bg-color);
+    border-radius: 10px ;
+}
+.img-view{
+    position: relative;
+}
+.img-view::before{
+    content: '';
+    position: absolute;
+    background-image: url(images/icon-view.svg);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: .3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.img-view:hover::before{
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 1;
+}
+.card-title{
+    font-size: 18px;
+}
+.card-title,
+.creation-p span{
+    cursor: pointer;
+}
+.card-title:hover,
+.creation-p span:hover{
+    color: var(--cyan);
+}
+.card-text{
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+.ETH{
+    font-size: 14px;
+    color: var(--cyan);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.info{
+    border-bottom: 1px solid var(--line-color); 
+}
+.eth{
+    width: 9px;
+}
+.period{
+    font-size: 13px;
+    color: var(--Soft-blue);
+}
+.avatar{
+    width: 30px;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.creation-p{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 ;
+    color: var(--Soft-blue);
+}
+.creation-p span{
+    color: white;
+}
